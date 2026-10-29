@@ -1,0 +1,266 @@
+.split {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.p {
+  color: var(--muted);
+  margin-top: 1.1rem;
+}
+
+.split .btn {
+  margin-top: 1.8rem;
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.1rem;
+}
+
+.panelItem {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.panelItem:nth-child(1) {
+  background: linear-gradient(135deg, var(--primary-700), var(--primary-600));
+  color: #fff;
+  border: none;
+}
+
+.panelItem:nth-child(4) {
+  background: linear-gradient(135deg, var(--accent-500), var(--accent-400));
+  color: #78350f;
+  border: none;
+}
+
+.panelItem strong {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.panelItem span {
+  font-size: 0.88rem;
+  opacity: 0.8;
+}
+
+.missions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+}
+
+.missionCard h3,
+.missionCardAlt h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.7rem;
+}
+
+.missionCard p,
+.missionCardAlt p {
+  color: var(--muted);
+}
+
+.missionCard {
+  border-top: 4px solid var(--primary-600);
+}
+
+.missionCardAlt {
+  border-top: 4px solid var(--accent-500);
+}
+
+.valueTitle {
+  font-size: 1.1rem;
+  margin-bottom: 0.45rem;
+}
+
+.valueText {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 0;
+  border-left: 2px dashed var(--primary-100);
+  margin-left: 0.6rem;
+  padding-left: 0;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 1.5rem;
+  padding: 1.3rem 0 1.3rem 1.8rem;
+  position: relative;
+}
+
+.timelineItem::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 1.75rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 3px solid var(--primary-600);
+}
+
+.year {
+  font-weight: 800;
+  color: var(--primary-700);
+  font-size: 1.05rem;
+}
+
+.timelineItem h3 {
+  font-size: 1.1rem;
+}
+
+.timelineItem p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+}
+
+.person {
+  text-align: center;
+}
+
+.personAvatar {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1.1rem;
+  background: linear-gradient(135deg, var(--primary-700), var(--primary-500));
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.person h3 {
+  font-size: 1.05rem;
+}
+
+.personRole {
+  color: var(--primary-700);
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin-top: 0.25rem;
+}
+
+.personDetail {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.principalWrap {
+  display: block;
+  padding-bottom: 5.5rem;
+}
+
+.principal {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  align-items: start;
+  background: linear-gradient(120deg, var(--primary-900), var(--primary-700));
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.principal::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.35), transparent 70%);
+  top: -140px;
+  right: -80px;
+}
+
+.principal > * {
+  position: relative;
+  z-index: 1;
+}
+
+.principalAvatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.principalKicker {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-400);
+  margin-bottom: 0.9rem;
+}
+
+.principalQuote {
+  font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+  line-height: 1.55;
+  font-style: italic;
+  max-width: 65ch;
+}
+
+.principalName {
+  margin-top: 1.4rem;
+}
+
+.principalName strong {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.principalName span {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 860px) {
+  .split,
+  .missions {
+    grid-template-columns: 1fr;
+  }
+
+  .timelineItem {
+    grid-template-columns: 70px 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .panel {
+    grid-template-columns: 1fr;
+  }
+
+  .timelineItem {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+}

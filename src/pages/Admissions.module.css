@@ -1,0 +1,248 @@
+.steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.2rem;
+  counter-reset: step;
+}
+
+.step {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.4rem;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.stepNum {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--primary-700), var(--primary-500));
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.step h3 {
+  font-size: 1.05rem;
+}
+
+.step p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.checklist {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1.8rem;
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem 1.1rem;
+  font-size: 0.95rem;
+}
+
+.checklist svg {
+  color: var(--primary-600);
+  flex-shrink: 0;
+}
+
+.tableWrap {
+  margin-top: 1.8rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+}
+
+.table th,
+.table td {
+  padding: 0.95rem 1.1rem;
+  text-align: left;
+}
+
+.table thead {
+  background: var(--primary-800);
+  color: #fff;
+}
+
+.table tbody tr:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
+
+.table tbody tr:hover {
+  background: var(--primary-50);
+}
+
+.table td:nth-child(2),
+.table td:nth-child(3),
+.table th:nth-child(2),
+.table th:nth-child(3) {
+  white-space: nowrap;
+}
+
+.note {
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.faq {
+  max-width: 780px;
+  margin-inline: auto;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.faqItem {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faqOpen {
+  border-color: var(--primary-500);
+  box-shadow: var(--shadow);
+}
+
+.faqQuestion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: none;
+  border: none;
+  padding: 1.2rem 1.4rem;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.faqIcon {
+  min-width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--primary-50);
+  color: var(--primary-700);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.faqOpen .faqIcon {
+  background: var(--primary-700);
+  color: #fff;
+}
+
+.faqAnswer {
+  padding: 0 1.4rem 1.3rem;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.cta {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, var(--primary-800), var(--primary-600));
+  border-radius: var(--radius-lg);
+  color: #fff;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-lg);
+}
+
+.cta::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.4), transparent 70%);
+  bottom: -140px;
+  right: -60px;
+}
+
+.cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+.ctaKicker {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-400);
+}
+
+.cta h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-top: 0.55rem;
+}
+
+.cta p {
+  margin-top: 0.7rem;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 54ch;
+}
+
+.ctaActions {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1080px) {
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .steps,
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    padding: 2.2rem;
+  }
+}
